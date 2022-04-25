@@ -17,7 +17,6 @@ const Posts = ({ setCurrentId }) => {
                     </Grid>
                 ))}
             </Grid>
-// testing agian and again
     )
 }
 
