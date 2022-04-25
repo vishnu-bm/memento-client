@@ -6,9 +6,9 @@ const API = axios.create({ baseURL })
 
 API.interceptors.request.use((req) => {
 
-    if(sessionStorage.getItem('profile')) {
+    if (sessionStorage.getItem('profile')) {
         req.headers.authorization = `Bearer ${JSON.parse(sessionStorage.getItem('profile')).token}`
-    } 
+    }
     return req
 })
 
@@ -20,3 +20,5 @@ export const likePost = (id) => API.patch(`${'/posts'}/${id}/like`)
 
 export const signIn = (formData) => API.post('/user/signIn', formData);
 export const signUp = (formData) => API.post('/user/signUp', formData);
+
+// hello zubiun
